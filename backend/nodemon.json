@@ -1,0 +1,10 @@
+{
+  "ignore": [
+    "templates/*",
+    "outputs/*",
+    "logs/*",
+    "*.svg",
+    "*.png",
+    "*.jpg"
+  ]
+}

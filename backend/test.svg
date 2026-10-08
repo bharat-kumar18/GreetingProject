@@ -1,0 +1,6 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="20">{{name}}</text>
+  <text x="10" y="40">{{occasion}}</text>
+  <text x="10" y="60">{{date}}</text>
+  <text x="10" y="80">{{message}}</text>
+</svg>

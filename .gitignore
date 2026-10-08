@@ -1,0 +1,7 @@
+node_modules/
+.env
+dist/
+backend/storage/generated/*
+backend/storage/uploads/*
+!backend/storage/generated/.gitkeep
+!backend/storage/uploads/.gitkeep

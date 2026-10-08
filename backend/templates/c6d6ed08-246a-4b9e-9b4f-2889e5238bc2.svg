@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 650" width="400" height="650">
+  <defs>
+    <!-- Background subtle gradient / shadow -->
+    <linearGradient id="envelopeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#693043"/>
+      <stop offset="100%" stop-color="#4a1d2e"/>
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf2f4"/>
+      <stop offset="50%" stop-color="#fce7eb"/>
+      <stop offset="100%" stop-color="#f8d7de"/>
+    </linearGradient>
+
+    <!-- Quilling Paper Gradients -->
+    <linearGradient id="petalGradOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fda4af"/>
+      <stop offset="50%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+
+    <linearGradient id="petalGradInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe4e6"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3e635"/>
+      <stop offset="50%" stop-color="#65a30d"/>
+      <stop offset="100%" stop-color="#3f6212"/>
+    </linearGradient>
+
+    <linearGradient id="leafCoil" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d9f99d"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </linearGradient>
+
+    <linearGradient id="butterflyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="50%" stop-color="#db2777"/>
+      <stop offset="100%" stop-color="#9d174d"/>
+    </linearGradient>
+
+    <radialGradient id="pearlShine" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#fdf2f8"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </radialGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="cardShadow" x="-15%" y="-10%" width="130%" height="125%">
+      <feDropShadow dx="4" dy="12" stdDeviation="14" flood-color="#1f0712" flood-opacity="0.45"/>
+    </filter>
+
+    <filter id="quillShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="1.5" dy="2.5" stdDeviation="2" flood-color="#4c0519" flood-opacity="0.32"/>
+    </filter>
+
+    <filter id="innerFrameShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#881337" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Brick/Basketweave Texture for Top/Right Corner -->
+    <pattern id="brickPattern" width="16" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 0 5 L 16 5 M 8 0 L 8 5 M 0 10 L 16 10 M 16 5 L 16 10 M 0 5 L 0 10" 
+            stroke="#f43f5e" stroke-width="0.8" stroke-opacity="0.22" fill="none"/>
+      <line x1="0" y1="0" x2="16" y2="0" stroke="#f43f5e" stroke-width="0.8" stroke-opacity="0.22"/>
+    </pattern>
+
+    <!-- Reusable 5-petal quilled flower -->
+    <g id="quillFlower" filter="url(#quillShadow)">
+      <!-- Petal 1 (Top) -->
+      <g transform="rotate(0)">
+        <path d="M 0 0 C -10 -14, -12 -30, 0 -38 C 12 -30, 10 -14, 0 0 Z" fill="url(#petalGradInner)" stroke="url(#petalGradOuter)" stroke-width="1.8"/>
+        <!-- Interior rolled strip coil illusion -->
+        <path d="M 0 -8 C -5 -16, -6 -26, 0 -32 C 5 -26, 4 -16, 0 -8" fill="none" stroke="#e11d48" stroke-width="0.9" opacity="0.7"/>
+        <path d="M 0 -14 C -3 -20, -3 -26, 0 -29 C 3 -26, 3 -20, 0 -14" fill="none" stroke="#be123c" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <!-- Petal 2 (72 deg) -->
+      <g transform="rotate(72)">
+        <path d="M 0 0 C -10 -14, -12 -30, 0 -38 C 12 -30, 10 -14, 0 0 Z" fill="url(#petalGradInner)" stroke="url(#petalGradOuter)" stroke-width="1.8"/>
+        <path d="M 0 -8 C -5 -16, -6 -26, 0 -32 C 5 -26, 4 -16, 0 -8" fill="none" stroke="#e11d48" stroke-width="0.9" opacity="0.7"/>
+        <path d="M 0 -14 C -3 -20, -3 -26, 0 -29 C 3 -26, 3 -20, 0 -14" fill="none" stroke="#be123c" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <!-- Petal 3 (144 deg) -->
+      <g transform="rotate(144)">
+        <path d="M 0 0 C -10 -14, -12 -30, 0 -38 C 12 -30, 10 -14, 0 0 Z" fill="url(#petalGradInner)" stroke="url(#petalGradOuter)" stroke-width="1.8"/>
+        <path d="M 0 -8 C -5 -16, -6 -26, 0 -32 C 5 -26, 4 -16, 0 -8" fill="none" stroke="#e11d48" stroke-width="0.9" opacity="0.7"/>
+        <path d="M 0 -14 C -3 -20, -3 -26, 0 -29 C 3 -26, 3 -20, 0 -14" fill="none" stroke="#be123c" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <!-- Petal 4 (216 deg) -->
+      <g transform="rotate(216)">
+        <path d="M 0 0 C -10 -14, -12 -30, 0 -38 C 12 -30, 10 -14, 0 0 Z" fill="url(#petalGradInner)" stroke="url(#petalGradOuter)" stroke-width="1.8"/>
+        <path d="M 0 -8 C -5 -16, -6 -26, 0 -32 C 5 -26, 4 -16, 0 -8" fill="none" stroke="#e11d48" stroke-width="0.9" opacity="0.7"/>
+        <path d="M 0 -14 C -3 -20, -3 -26, 0 -29 C 3 -26, 3 -20, 0 -14" fill="none" stroke="#be123c" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <!-- Petal 5 (288 deg) -->
+      <g transform="rotate(288)">
+        <path d="M 0 0 C -10 -14, -12 -30, 0 -38 C 12 -30, 10 -14, 0 0 Z" fill="url(#petalGradInner)" stroke="url(#petalGradOuter)" stroke-width="1.8"/>
+        <path d="M 0 -8 C -5 -16, -6 -26, 0 -32 C 5 -26, 4 -16, 0 -8" fill="none" stroke="#e11d48" stroke-width="0.9" opacity="0.7"/>
+        <path d="M 0 -14 C -3 -20, -3 -26, 0 -29 C 3 -26, 3 -20, 0 -14" fill="none" stroke="#be123c" stroke-width="0.8" opacity="0.6"/>
+      </g>
+      <!-- Center Pearl Bead -->
+      <circle cx="0" cy="0" r="5.5" fill="url(#pearlShine)" stroke="#e2e8f0" stroke-width="0.6"/>
+      <ellipse cx="-1.5" cy="-2" rx="2" ry="1.2" fill="#ffffff" opacity="0.9"/>
+    </g>
+
+    <!-- Quilled Marquise Leaf with concentric rolled paper ringlets -->
+    <g id="quillLeaf" filter="url(#quillShadow)">
+      <!-- Outer leaf eye / marquise contour -->
+      <path d="M 0 0 C -8 -12, -9 -25, 0 -34 C 9 -25, 8 -12, 0 0 Z" fill="none" stroke="url(#leafGrad)" stroke-width="2.2"/>
+      <!-- Inner paper coil curves -->
+      <path d="M 0 -4 C -6 -13, -7 -22, 0 -29 C 7 -22, 6 -13, 0 -4" fill="none" stroke="url(#leafCoil)" stroke-width="1.3"/>
+      <path d="M 0 -8 C -4 -15, -4 -20, 0 -25 C 4 -20, 4 -15, 0 -8" fill="none" stroke="#65a30d" stroke-width="1.1"/>
+      <circle cx="0" cy="-17" r="2.5" fill="none" stroke="#4d7c0f" stroke-width="1"/>
+    </g>
+
+    <!-- Small Quilled Berry / Tight Coil -->
+    <g id="quillBerry" filter="url(#quillShadow)">
+      <circle cx="0" cy="0" r="6" fill="#f43f5e" stroke="#be123c" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3.8" fill="none" stroke="#fda4af" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.8" fill="#ffe4e6"/>
+    </g>
+
+    <style>
+      .font-serif { font-family: "Playfair Display", "Georgia", "Times New Roman", serif; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Base Tabletop Surface -->
+  <rect width="400" height="650" fill="#f8fafc"/>
+
+  <!-- Tilted Background Envelope/Folio Card -->
+  <g transform="translate(200, 320) rotate(-18) translate(-175, -230)">
+    <rect x="0" y="0" width="310" height="420" rx="14" fill="url(#envelopeBg)" opacity="0.96" filter="url(#cardShadow)"/>
+    <!-- Fold Flap Line -->
+    <path d="M 0 0 L 155 120 L 310 0" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5"/>
+  </g>
+
+  <!-- Foreground Greeting Card (Main Canvas) -->
+  <g transform="translate(48, 50)" filter="url(#cardShadow)">
+    <!-- Base Card Surface -->
+    <rect x="0" y="0" width="280" height="490" rx="16" fill="url(#cardBg)"/>
+    <rect x="0" y="0" width="280" height="490" rx="16" fill="none" stroke="#fbcfe8" stroke-width="1.5"/>
+
+    <!-- Embossed / Textured Border Corner (Top & Right) -->
+    <path d="M 0 0 L 280 0 L 280 220 L 220 160 L 220 50 L 50 50 L 0 0 Z" fill="#fce7eb"/>
+    <path d="M 0 0 L 280 0 L 280 220 L 220 160 L 220 50 L 50 50 L 0 0 Z" fill="url(#brickPattern)"/>
+    <path d="M 50 50 L 220 50 L 220 160" fill="none" stroke="#f43f5e" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+    <!-- Inner Cream Inset Greeting Panel with Shadow -->
+    <g filter="url(#innerFrameShadow)">
+      <rect x="36" y="42" width="206" height="406" rx="10" fill="#ffffff"/>
+      <rect x="36" y="42" width="206" height="406" rx="10" fill="none" stroke="#fecdd3" stroke-width="1"/>
+    </g>
+
+    <!-- Vine / Stems Artwork (Fluid Filigree Vine) -->
+    <g fill="none" stroke="#4d7c0f" stroke-linecap="round" filter="url(#quillShadow)">
+      <!-- Main twisting stem -->
+      <path d="M 46 140 Q 65 200, 48 260 T 56 370 Q 75 425, 125 425 T 185 410" stroke-width="2.6"/>
+      <!-- Lateral branches -->
+      <path d="M 52 185 Q 75 180, 85 165" stroke-width="2"/>
+      <path d="M 54 235 Q 85 240, 102 215" stroke-width="2"/>
+      <path d="M 50 300 Q 75 295, 96 320" stroke-width="2"/>
+      <path d="M 70 380 Q 95 365, 120 375" stroke-width="2"/>
+      <path d="M 110 422 Q 135 395, 148 375" stroke-width="2"/>
+      <!-- Small Tendril Swirls -->
+      <path d="M 52 160 Q 62 150, 68 156 Q 72 165, 62 168" stroke-width="1.4"/>
+      <path d="M 52 340 Q 62 332, 69 338 T 64 348" stroke-width="1.4"/>
+      <path d="M 160 415 Q 170 425, 180 422 T 184 412" stroke-width="1.4"/>
+    </g>
+
+    <!-- Quilled Leaves Along Vine -->
+    <use href="#quillLeaf" x="65" y="185" transform="rotate(35, 65, 185) scale(0.85)"/>
+    <use href="#quillLeaf" x="78" y="172" transform="rotate(75, 78, 172) scale(0.75)"/>
+    <use href="#quillLeaf" x="66" y="240" transform="rotate(-40, 66, 240) scale(0.9)"/>
+    <use href="#quillLeaf" x="85" y="235" transform="rotate(50, 85, 235) scale(0.8)"/>
+    <use href="#quillLeaf" x="98" y="220" transform="rotate(85, 98, 220) scale(0.75)"/>
+    <use href="#quillLeaf" x="65" y="315" transform="rotate(-30, 65, 315) scale(0.85)"/>
+    <use href="#quillLeaf" x="86" y="325" transform="rotate(45, 86, 325) scale(0.85)"/>
+    <use href="#quillLeaf" x="125" y="375" transform="rotate(-50, 125, 375) scale(0.8)"/>
+    <use href="#quillLeaf" x="140" y="370" transform="rotate(25, 140, 370) scale(0.8)"/>
+    <use href="#quillLeaf" x="95" y="420" transform="rotate(80, 95, 420) scale(0.85)"/>
+    <use href="#quillLeaf" x="110" y="422" transform="rotate(110, 110, 422) scale(0.8)"/>
+
+    <!-- Small Tight Buds & Berries -->
+    <use href="#quillBerry" x="38" y="222"/>
+    <use href="#quillBerry" x="118" y="208"/>
+    <use href="#quillBerry" x="48" y="125"/>
+
+    <!-- Rising Bud with Calyx -->
+    <g transform="translate(142, 280)" filter="url(#quillShadow)">
+      <!-- Calyx -->
+      <path d="M -8 10 C -8 4, -4 0, 0 0 C 4 0, 8 4, 8 10 Z" fill="#65a30d" stroke="#3f6212" stroke-width="1.2"/>
+      <!-- Blooming Petals -->
+      <path d="M -7 0 C -10 -12, -4 -22, 0 -26 C 4 -22, 10 -12, 7 0 Z" fill="url(#petalGradInner)" stroke="url(#petalGradOuter)" stroke-width="1.5"/>
+      <path d="M -2 0 C -4 -10, -1 -18, 0 -22 C 1 -18, 4 -10, 2 0 Z" fill="#ffe4e6" stroke="#f43f5e" stroke-width="1"/>
+      <circle cx="0" cy="12" r="3" fill="#4d7c0f"/>
+    </g>
+
+    <!-- Quilled Flowers Cascading Down (Exact positions matching photo composition) -->
+    <!-- Flower 1: Top cluster -->
+    <use href="#quillFlower" x="72" y="105" transform="scale(0.85, 0.85) translate(-10, -5)"/>
+    <use href="#quillFlower" x="52" y="145" transform="scale(0.78, 0.78) translate(-10, 0)"/>
+
+    <!-- Flower 2 & 3: Mid-upper clusters -->
+    <use href="#quillFlower" x="64" y="208" transform="scale(0.9, 0.9)"/>
+    <use href="#quillFlower" x="96" y="258" transform="scale(0.92, 0.92)"/>
+    <use href="#quillFlower" x="68" y="282" transform="scale(0.88, 0.88)"/>
+
+    <!-- Flower 4: Lower sweep -->
+    <use href="#quillFlower" x="115" y="338" transform="scale(0.86, 0.86)"/>
+    <use href="#quillFlower" x="54" y="375" transform="scale(0.85, 0.85)"/>
+
+    <!-- Flower 5 & 6: Bottom horizontal curve -->
+    <use href="#quillFlower" x="65" y="440" transform="scale(0.88, 0.88)"/>
+    <use href="#quillFlower" x="106" y="420" transform="scale(0.86, 0.86)"/>
+    <use href="#quillFlower" x="175" y="430" transform="scale(0.82, 0.82)"/>
+
+    <!-- Laser-cut 3D Butterfly hovering over the right blank area -->
+    <g transform="translate(162, 130) rotate(-14)" filter="url(#quillShadow)">
+      <!-- Cast Shadow under angled wing -->
+      <ellipse cx="6" cy="18" rx="14" ry="5" fill="#4c0519" opacity="0.25"/>
+
+      <!-- Left Forewing & Hindwing (Flat) -->
+      <path d="M 0 0 C -15 -18, -32 -14, -30 6 C -28 20, -10 24, 0 10 Z" 
+            fill="url(#butterflyGrad)" opacity="0.88"/>
+      <!-- Filigree Cutouts inside left wing -->
+      <ellipse cx="-16" cy="-2" rx="6" ry="3.5" fill="#ffffff" opacity="0.9" transform="rotate(-20, -16, -2)"/>
+      <ellipse cx="-18" cy="8" rx="4" ry="2.5" fill="#ffffff" opacity="0.9"/>
+      <ellipse cx="-8" cy="12" rx="3" ry="2" fill="#ffffff" opacity="0.9"/>
+
+      <!-- Butterfly Body -->
+      <ellipse cx="0" cy="6" rx="2.5" ry="12" fill="#831843"/>
+      <!-- Antennae with curly tips -->
+      <path d="M -1 -5 C -4 -16, -10 -20, -14 -18" fill="none" stroke="#831843" stroke-width="1.1" stroke-linecap="round"/>
+      <path d="M 1 -5 C 4 -16, 10 -20, 14 -18" fill="none" stroke="#831843" stroke-width="1.1" stroke-linecap="round"/>
+
+      <!-- Right Forewing & Hindwing (Elevated 3D Pop-out Angle) -->
+      <g transform="rotate(18, 0, 6)">
+        <path d="M 0 0 C 18 -24, 38 -18, 36 8 C 34 24, 12 28, 0 10 Z" 
+              fill="url(#butterflyGrad)"/>
+        <!-- Intricate laser-cut lace holes -->
+        <ellipse cx="18" cy="-4" rx="7" ry="4" fill="#ffffff" opacity="0.95" transform="rotate(25, 18, -4)"/>
+        <ellipse cx="20" cy="8" rx="5" ry="3" fill="#ffffff" opacity="0.95"/>
+        <ellipse cx="10" cy="14" rx="3.5" ry="2.5" fill="#ffffff" opacity="0.95"/>
+        <circle cx="28" cy="2" r="1.5" fill="#ffffff" opacity="0.95"/>
+        <circle cx="26" cy="13" r="1.5" fill="#ffffff" opacity="0.95"/>
+      </g>
+    </g>
+
+    <!-- Template Text Overlay in the open right-hand card space -->
+    <!-- Occasion Tag -->
+    <text x="175" y="215" 
+          text-anchor="middle" 
+          class="font-sans" 
+          font-size="10" 
+          font-weight="700" 
+          letter-spacing="2.5" 
+          fill="#e11d48">
+      {{occasion}}
+    </text>
+
+    <!-- Name / Recipient Headline -->
+    <text x="175" y="248" 
+          text-anchor="middle" 
+          class="font-serif" 
+          font-size="24" 
+          font-weight="700" 
+          font-style="italic"
+          fill="#881337">
+      {{name}}
+    </text>
+
+    <!-- Heartwarming Message -->
+    <text x="175" y="325" 
+          text-anchor="middle" 
+          class="font-sans" 
+          font-size="12" 
+          fill="#4b5563">
+      <tspan x="175" dy="0">{{message}}</tspan>
+    </text>
+
+    <!-- Subtle Sign-off / Date -->
+    <line x1="145" y1="365" x2="205" y2="365" stroke="#f43f5e" stroke-width="0.8" stroke-opacity="0.4"/>
+    <circle cx="175" cy="365" r="2" fill="#e11d48"/>
+    <text x="175" y="388" 
+          text-anchor="middle" 
+          class="font-sans" 
+          font-size="10" 
+          font-weight="500" 
+          letter-spacing="1" 
+          fill="#9ca3af">
+      {{date}}
+    </text>
+  </g>
+</svg>
