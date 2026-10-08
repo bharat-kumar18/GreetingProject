@@ -6,7 +6,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
   return (
     <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header flex-between">
-        GreetingGen
+        <span className="brand-text">GreetingGen</span>
         <button className="menu-toggle" onClick={closeSidebar} style={{ display: isOpen ? 'block' : 'none' }}>
           <X size={20} />
         </button>
