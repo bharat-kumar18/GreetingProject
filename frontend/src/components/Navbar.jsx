@@ -1,11 +1,16 @@
 import React from 'react';
-import { Bell } from 'lucide-react';
+import { Bell, Menu } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   return (
     <header className="navbar">
-      <div className="navbar-search">
-        {/* Placeholder for future search/breadcrumb */}
+      <div className="navbar-left flex-center gap-4">
+        <button className="menu-toggle" onClick={toggleSidebar}>
+          <Menu size={24} />
+        </button>
+        <div className="navbar-search">
+          {/* Placeholder for future search/breadcrumb */}
+        </div>
       </div>
       <div className="navbar-actions flex-center gap-4">
         <button className="btn btn-secondary" style={{ padding: '8px', borderRadius: '50%' }}>
