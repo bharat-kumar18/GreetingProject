@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import api from '../services/api';
+import api, { API_BASE_URL } from '../services/api';
 import Button from '../components/Button';
 import Loading from '../components/Loading';
 import ErrorMsg from '../components/ErrorMsg';
@@ -81,7 +81,7 @@ const GeneratedOutputs = () => {
     // We trigger download by constructing the URL directly since our backend handles the stream.
     // Given the Axios interceptors, we can't cleanly pipe binary streams unless we define a dedicated util.
     // Standard approach: open window or create anchor.
-    const url = `${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/generation/outputs/${outputId}/download`;
+    const url = `${API_BASE_URL}/generation/outputs/${outputId}/download`;
     
     const link = document.createElement('a');
     link.href = url;
@@ -93,7 +93,7 @@ const GeneratedOutputs = () => {
 
   const handlePreview = (outputId) => {
     // For preview, we can just use the download URL as the src for an img tag
-    const url = `${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/generation/outputs/${outputId}/download`;
+    const url = `${API_BASE_URL}/generation/outputs/${outputId}/download`;
     setPreviewImage(url);
     setIsPreviewModalOpen(true);
   };

@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://greetingproject-p7ew.onrender.com/api';
+export const SERVER_BASE_URL = API_BASE_URL.replace(/\/api\/?$/, '');
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://greetingproject-p7ew.onrender.com/api',
+  baseURL: API_BASE_URL,
 });
 
 // Response interceptor to unwrap data

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../services/api';
+import api, { SERVER_BASE_URL } from '../services/api';
 import Button from '../components/Button';
 import Loading from '../components/Loading';
 import ErrorMsg from '../components/ErrorMsg';
@@ -8,8 +8,7 @@ import Modal from '../components/Modal';
 import { Plus, Image as ImageIcon, CheckCircle, XCircle, Trash2 } from 'lucide-react';
 
 const TemplateCard = ({ template, onDelete, onUse }) => {
-  const serverUrl = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : 'http://localhost:3000';
-  const imageUrl = template.file_path ? `${serverUrl}/${template.file_path}` : null;
+  const imageUrl = template.file_path ? `${SERVER_BASE_URL}/${template.file_path}` : null;
 
   return (
     <div className="card" style={{ display: 'flex', flexDirection: 'column', padding: '0', overflow: 'hidden' }}>
