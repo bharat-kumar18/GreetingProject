@@ -2,7 +2,7 @@ const pool = require('../config/db');
 
 class DashboardService {
   static async getStats() {
-    const templatesQuery = 'SELECT COUNT(*) FROM templates';
+    const templatesQuery = 'SELECT COUNT(*) FROM templates WHERE deleted_at IS NULL';
     const recipientsQuery = 'SELECT COUNT(*) FROM recipients';
     const outputsQuery = 'SELECT COUNT(*) FROM generated_outputs';
 
